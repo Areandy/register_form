@@ -46,6 +46,10 @@
 			$data = array_values($data);
 
 			$stmt = $pdo->prepare($sql);
+			// var_dump($data);
+			// echo '<br>';
+			// print_r($stmt);
+			// exit;
 			$stmt->execute($data);
 
 			return (bool)$stmt;

@@ -1,7 +1,10 @@
 <?php
 	session_start();
 
-	if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+	if ($_SERVER['REQUEST_METHOD'] !== 'POST'
+		|| !isset($_POST['fname']) || !isset($_POST['lname'])
+		|| !isset($_POST['age']) || !isset($_POST['bio'])) {
+
 		header('Location: /client/signin.php');
 		exit;
 	}
@@ -55,6 +58,8 @@
 		if (move_uploaded_file($_FILES['pic']['tmp_name'], '../assets/uploads/' . $new_file)) {
 			$_POST['pic'] = '/assets/uploads/' . $new_file;
 		} else {
+			// echo '<br>End';
+			// exit;
 			$_SESSION['error'] = $lang['photo_load_err'];
 			header('Location: /client/edit.php');
 			exit;

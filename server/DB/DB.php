@@ -2,9 +2,9 @@
 
 	class DB {
 
-		static $dsn =  'mysql:host=localhost;dbname=my_db';
-		static $user = 'max';
-		static $pass = '123QWEqwe';
+		static $dsn =  'mysql:host=db;dbname=my_db';
+		static $user = 'devuser';
+		static $pass = 'devpass';
 
 		public function connect() {
 
