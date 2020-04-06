@@ -16,16 +16,11 @@ services:
       - ./migration.sql:/docker-entrypoint-initdb.d/migration.sql
 
   web:
-    # image: php:7.2.2-apache
     build:
       context: .
     container_name: php_web
     depends_on:
       - db
-    # volumes:
-    #   - ./assets/:/var/www/html/assets/
-    #   - ./client/:/var/www/html/client/
-    #   - ./server/:/var/www/html/server/
     ports:
       - "8080:80"
     stdin_open: true
