@@ -52,8 +52,10 @@
 						<label for="password"><?php echo $lang['pass'] ?></label>
 						<input type="password" class="form-control" id="password" name="pass" data-toggle="tooltip" required>
 						<div id="password_feedback" class="invalid-feedback"></div>
+						<a class="mt-3 d-flex justify-content-center" href="/client/signup.php"><?php echo $lang['signup'] ?></a>
 					</div>
 					<button type="submit" class="btn orange-bg mt-3"><?php echo $lang['submit'] ?></button>
+
 				</form>
 
 			</div>

@@ -3,7 +3,7 @@
 	if ($_SERVER['REQUEST_METHOD'] !== 'POST'
 		|| !isset($_POST['name_or_email']) || !isset($_POST['pass'])) {
 
-		header('Location: /client/index.html');
+		header('Location: /client/signin.php');
 		exit;
 	}
 
